@@ -1,3 +1,3 @@
 FROM ubuntu
-RUN echo "Some text" > helloWorld.txt
+RUN echo "Hello, World! 42." > helloWorld.txt
 CMD cat helloWorld.txt
