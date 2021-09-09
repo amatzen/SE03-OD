@@ -1,0 +1,9 @@
+CREATE DATABASE abook;
+
+USE abook;
+
+CREATE TABLE abooktable (
+	abookid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(30) NOT NULL,
+	address VARCHAR(50) NOT NULL
+);
