@@ -1,0 +1,20 @@
+# L5E5.yml
+apiVersion: apps/v1    
+kind: Deployment       
+metadata:
+  name: almat20-test
+spec:
+  selector:
+    matchLabels:       
+      component: almat20
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        component: almat20
+    spec:
+      containers:
+        - name: spekt8
+          image: ahmadhamid/spekt8
+          ports:
+            - containerPort: 3000
