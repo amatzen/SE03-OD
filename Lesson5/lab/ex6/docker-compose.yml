@@ -1,0 +1,12 @@
+services:
+
+  db_container:
+    image: amatzen/se03-od-l2-ex4
+    command: --default-authentication-plugin=mysql_native_password
+
+  web:
+    image: amatzen/se03-od-l2-ex2
+    depends_on:
+    - sql
+    ports:
+    - '7000:80'

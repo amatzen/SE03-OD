@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: almat20-l2e5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: almat20-l2e5-pod
+  template:
+    metadata:
+      labels:
+        app: almat20-l2e5-pod
+    spec:
+      containers:
+      - name: dbcontainer
+        image: docker.io/amatzen/se03-od-l2-ex4
+        args: ["--default-authentication-plugin=mysql_native_password"]
+        ports:
+        - containerPort: 3306
+      - name: web
+        image: docker.io/amatzen/se03-od-l2-ex2
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: almat-l2e5-service
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 8080
+    nodePort: 32323
+  selector:
+    app: almat20-l2e5-pod
