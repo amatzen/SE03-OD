@@ -1,0 +1,14 @@
+ex3 on  master! ⌚ 14:30:31
+$ docker run --memory=1g amatzen/se03-od-l6-ex3
+time: 422
+
+ex3 on  master! ⌚ 14:30:43
+$ docker run --memory=400m amatzen/se03-od-l6-ex3
+
+ex3 on  master! ⌚ 14:30:52
+$ docker run --memory=700m amatzen/se03-od-l6-ex3
+time: 1614
+
+ex3 on  master! ⌚ 14:31:00
+$ docker run --memory=512m amatzen/se03-od-l6-ex3
+time: 2490
