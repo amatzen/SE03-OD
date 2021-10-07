@@ -1,0 +1,15 @@
+ex2 on  master! ⌚ 14:18:37
+$ docker run --cpus="1.5" amatzen/se03-od-l6-ex2
+3.4896645545959473 seconds
+
+ex2 on  master! ⌚ 14:18:46
+$ docker run --cpus="5" amatzen/se03-od-l6-ex2
+3.3988196849823 seconds
+
+ex2 on  master! ⌚ 14:18:56
+$ docker run --cpus="1" amatzen/se03-od-l6-ex2
+3.41052508354187 seconds
+
+ex2 on  master! ⌚ 14:19:06
+$ docker run --cpus="0.8" amatzen/se03-od-l6-ex2
+4.630845308303833 seconds
