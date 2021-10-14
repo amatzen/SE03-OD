@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=test
+  app:
+    build: .
+    privileged: true
