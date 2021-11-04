@@ -1,7 +1,8 @@
 FROM ubuntu
 
 RUN apt-get update && apt-get install -y build-essential
+WORKDIR /project
 
-COPY . .
+COPY resources .
 
-CMD ["gcc", "*.c", "-o", "o"]
+RUN make
