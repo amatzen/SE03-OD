@@ -60,6 +60,7 @@ void print_number( void *ptr )
 		pthread_mutex_lock(&lock);
 		counter++;
 		printf("%s%d \n", identifier, counter);
+        pthread_mutex_unlock(&lock);
 	}
 }
 

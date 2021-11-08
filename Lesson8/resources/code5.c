@@ -22,7 +22,7 @@ int main()
 	// Create cpuset for thread B, lock to core1
         cpu_set_t cpusetB;
 	CPU_ZERO(&cpusetB);
-        CPU_SET(1, &cpusetB);
+        CPU_SET(0, &cpusetB);
 
 	// Create and start thread A, pass identifier to thread
         char * iden = "A";
